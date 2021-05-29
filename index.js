@@ -1,17 +1,14 @@
 const { Discord, Client, MessageEmbed } = require(`discord.js`)
 const client = new Client()
-const { Token } = require(`./token`)
 const db = require(`quick.db`)
-const prefix = "lol"
-const token = process.env.token
+const token = "TOKEN"
 client.on(`ready`, async () => {
-client.user.setActivity(`in lol collecter event`)
 console.log("lol ready")
 })
 
 client.on(`message`, async message => {
 if(message.author.bot) return;
-if(message.channel.id === "848131402435657749") {
+if(message.channel.id === "CHANNEL ID") {
 if(message.content === "lol" || message.content === "Lol" || message.content === "lOl" || message.content === "loL" || message.content === "LOL") {
 db.add(`lol_${message.guild.id}_${message.author.id}`, 1)
 message.react(`👍`)
