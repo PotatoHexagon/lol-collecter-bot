@@ -1,2 +1,2 @@
 # lol-collecter-bot
-fun project
+lol
