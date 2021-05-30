@@ -25,7 +25,7 @@ if(message.content.startsWith(`lol!leaderboard`) || message.content.startsWith(`
 let lol = db.all().filter(i => i.ID.startsWith(`lol_${message.guild.id}`)).sort((a, b) => b.data - a.data);
 if (lol.length < 1) return message.channel.send("no one on leaderboard sed");
 let content = "";
-for (let i = 0; i < money.length; i++) {
+for (let i = 0; i < lol.length; i++) {
 let userr = message.guild.members.cache.get(lol[i].ID.split('_')[2])
 let user = userr.user.tag
 content += `${i+1}. ${user} - ${lol[i].data}\n`
