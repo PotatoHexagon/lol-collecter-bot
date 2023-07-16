@@ -1,2 +1,3 @@
 # lol-collecter-bot
-lol
+lol collecter bot for discord.js V12
+
